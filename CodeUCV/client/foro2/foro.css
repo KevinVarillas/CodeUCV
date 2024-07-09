@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap");
+*{
+    font-family: "Poppins", sans-serif;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+/* Navegación */
+nav {
+    color: #000000;
+    padding: 20px;
+}
+
+nav h2 {
+    margin-top: -5px; /* Ajusta el margen superior negativamente para mover el h2 hacia arriba */
+
+}
+
+/* Barra de comentarios */
+.comment-bar {
+    background-color: #bd34d2;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+    margin-left: -15px;
+    margin-right: -15px;
+
+}
+
+.comment-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.comment-buttons button {
+    padding: 10px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Borde semitransparente */
+    border-radius: 2rem;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+    color: #fff;
+    font-size: 0.9rem;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px); /* Efecto de vidrio */
+    -webkit-backdrop-filter: blur(10px); /* Para compatibilidad con Safari */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, border 0.3s ease;
+}
+
+.comment-buttons button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgb(197, 10, 248), rgb(231, 136, 27));
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    opacity: 0.5;
+    border-radius: 2rem;
+}
+
+.comment-buttons button:hover {
+    background: rgba(255, 255, 255, 0.3); /* Aumenta la transparencia al pasar el cursor */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.comment-buttons button:hover::before {
+    opacity: 0.7; /* Aumenta la opacidad del gradiente al pasar el cursor */
+}
+
+
+.container {    
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco semitransparente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    -webkit-backdrop-filter: blur(10px); /* Para compatibilidad con Safari */
+
+}
+.comment-input {
+    padding: 10px;
+    align-items: center;
+  }
+.comment-input input {
+    width: 80%; /* Aumenta el ancho del input */
+    padding: 15px; /* Aumenta el padding para que sea más grande */
+    border: 1px solid #ccc; /* Agrega un borde gris claro */
+    border-radius: 10px; /* Agrega un borde redondeado */
+    background-color: #fff;
+    color: #333;
+    margin-left: -10px;
+
+  }
+.comment-input button {
+    padding: 0.6rem 2rem; /* Ajusta el padding para que se alinee con el input */
+    border: none;
+    border-radius: 1rem;; /* Agrega un borde redondeado */
+    background-color: #ab1cb3;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    position: absolute;
+    margin-left: 0.5rem;
+}
+
+
+.comment {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info span {
+    font-weight: bold;
+    color: #333;
+}
+
+.comment-text p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.comment-actions button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.comment-actions i {
+    font-size: 20px;
+    color: #971a8f;
+}
+
+.like-icon {
+    cursor: pointer;
+    color: #971a8f;
+    transition: color 0.3s ease;
+}
+
+.like-icon.active {
+    color: #ff034f;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.like-icon.animate {
+    animation: pulse 0.3s ease;
+}
+
+        .reply-form {
+            display: none; /* Ocultar el formulario de respuesta por defecto */
+        }
+
+        .replies-container {
+            margin-left: 60px; /* Desplaza el contenedor de respuestas hacia la derecha */
+            padding-left: 20px;
+            border-left: 2px solid #ddd; /* Línea que separa las respuestas del comentario principal */
+        }
+        
+        .reply {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .reply .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .reply .user-info img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .reply .user-info span {
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .reply .reply-text p {
+            margin-bottom: 5px;
+            color: #3d3d3d;
+            margin-left: 6px;
+        }
+        
+        /* Estilos del formulario de respuesta */
+        .replyForm {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .replyForm input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        
+        .replyForm button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #971a8f;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .replyForm button:hover {
+            background-color: #690e63;
+        }
+        

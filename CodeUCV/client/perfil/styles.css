@@ -1,0 +1,233 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Global Styles */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  line-height: 1.4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #404040;
+}
+
+/* Profile Section */
+.seccion-perfil-usuario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 840px; /* Set width to 840px */
+  margin: 0 auto; /* Center the section */
+}
+
+.seccion-perfil-usuario .perfil-usuario-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(#B873FF, transparent);
+  margin-bottom: 1.25rem;
+}
+
+.seccion-perfil-usuario .perfil-usuario-portada {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 17rem;
+  background-image: linear-gradient(45deg, #BC3CFF, #317FFF);
+  border-radius: 0 0 20px 20px;
+}
+
+.seccion-perfil-usuario .perfil-usuario-portada .boton-portada {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 25px;
+  background-color: rgba(0, 0, 0, .5);
+  color: #fff;
+  cursor: pointer;
+}
+
+.seccion-perfil-usuario .perfil-usuario-avatar {
+  display: flex;
+  width: 180px;
+  height: 180px;
+  align-items: center;
+  justify-content: center;
+  border: 7px solid #FFFFFF;
+  background-color: #DFE5F2;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+  position: absolute;
+  bottom: -40px;
+  left: calc(50% - 90px);
+  z-index: 1;
+}
+
+.seccion-perfil-usuario .perfil-usuario-avatar img {
+  width: 100%;
+  position: relative;
+  border-radius: 50%;
+}
+
+.seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  border: 0;
+  background-color: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.seccion-perfil-usuario .perfil-usuario-body {
+  width: 70%;
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto; /* Center the body */
+}
+
+.seccion-perfil-usuario .perfil-usuario-body .nombre-completo,
+.seccion-perfil-usuario .perfil-usuario-body .usuario,
+.seccion-perfil-usuario .perfil-usuario-body .correo {
+  text-align: center; /* Center align text */
+}
+
+.seccion-perfil-usuario .perfil-usuario-body .nombre-completo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 3rem;
+}
+
+.seccion-perfil-usuario .perfil-usuario-body .usuario {
+  display: block;
+  width: 100%;
+  font-size: 1.5em;
+  margin-bottom: 0.5rem;
+}
+
+.seccion-perfil-usuario .perfil-usuario-body .correo {
+  color: #848484;
+  font-size: 0.95em;
+  margin-top: 1.5rem;
+}
+
+.seccion-perfil-usuario .perfil-usuario-footer,
+.seccion-perfil-usuario .perfil-usuario-bio {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 2rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+  background-color: #fff;
+  border-radius: 15px;
+  width: 130%;
+  margin-left: -5.5rem;
+}
+
+.seccion-perfil-usuario .perfil-usuario-bio {
+  margin-bottom: 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seccion-perfil-usuario .lista-datos {
+  width: 50%;
+  list-style: none;
+}
+
+.seccion-perfil-usuario.lista-datos li {
+  padding: 5px 0;
+}
+
+.seccion-perfil-usuario.lista-datos li > .icono {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+/* Media Queries */
+@media (max-width: 750px) {
+ .seccion-perfil-usuario.lista-datos {
+    width: 100%;
+  }
+
+ .seccion-perfil-usuario.perfil-usuario-portada,
+ .seccion-perfil-usuario.perfil-usuario-body {
+    width: 95%;
+  }
+}
+
+/* Input Styles */
+.input-dato,
+.input-nacimiento,
+.input-registro {
+  border: none;
+  background-color: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  outline: none;
+  width: 150px; /* Adjust width as needed */
+  margin-left: 10px; /* Space to the left of the input */
+}
+
+.input-habi {
+  border: none;
+  background-color: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  outline: none;
+  width: 600px; /* Adjust width as needed */
+  margin-left: 10px; /* Space to the left of the input */
+}
+
+/* Button Styles */
+.boton-registrar {
+  display: block; /* Make the button a block to center it */
+  margin: 20px auto; /* Margin to center vertically and horizontally */
+  padding: 0.6rem 2rem; /* Internal padding of the button */
+  background-color: #BC3CFF; /* Light purple background color */
+  color: #ffffff; /* White text color */
+  border: none; /* No border */
+  border-radius: 2rem; /* Rounded border */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.boton-registrar:hover {
+  background-color: #317FFF; /* Change background color on hover */
+}
+
+.perfil-usuario-bio {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.perfil-usuario-bio .usuario {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.perfil-usuario-bio .correo {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0;
+}

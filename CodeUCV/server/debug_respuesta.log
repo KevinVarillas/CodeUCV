@@ -1,0 +1,42 @@
+Array
+(
+    [nombre_usuario] => ALUISAC
+    [parent_comment_id] => 19
+    [reply_comment] => yo te ayudo
+)
+Array
+(
+    [nombre_usuario] => aluisac25
+    [parent_comment_id] => 5
+    [reply_comment] => oadadadad
+)
+Array
+(
+    [nombre_usuario] => agonzalezp
+    [parent_comment_id] => 6
+    [reply_comment] => yo se
+)
+Array
+(
+    [nombre_usuario] => ptorresg
+    [parent_comment_id] => 8
+    [reply_comment] => yo se
+)
+Array
+(
+    [nombre_usuario] => driverao
+    [parent_comment_id] => 21
+    [reply_comment] => yo se
+)
+Array
+(
+    [nombre_usuario] => driverao
+    [parent_comment_id] => 7
+    [reply_comment] => La elección del algoritmo más efectivo depende del tipo específico de tarea de reconocimiento de imágenes y las restricciones del proyecto (como la precisión, la velocidad y los recursos computacionales disponibles). Las CNNs y sus variantes siguen siendo las más populares y efectivas para una amplia gama de tareas, pero los transformadores y otros enfoques modernos también están ganando terreno rápidamente.
+)
+Array
+(
+    [nombre_usuario] => driverao
+    [parent_comment_id] => 20
+    [reply_comment] => no se
+)
